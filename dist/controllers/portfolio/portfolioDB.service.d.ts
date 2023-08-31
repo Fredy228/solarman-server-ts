@@ -1,0 +1,10 @@
+import { Database } from "sqlite3";
+import { IPost } from "../../interfaces/IPost";
+import { OrderPortfolioDto } from "./portfolio.dto";
+export declare const toConnectDB: () => Database;
+export declare const createPost: ({ title, year, components, urlImg, galleryUrl, id, }: IPost) => Promise<IPost>;
+export declare const getPosts: () => Promise<IPost[]>;
+export declare const getPostById: (id: string) => Promise<IPost>;
+export declare const deletePosts: (id: string) => Promise<string>;
+export declare const updatePost: ({ id, title, year, components, urlImg, galleryUrl, }: Partial<IPost>) => Promise<IPost>;
+export declare const updateOrderPosts: (objects: Array<OrderPortfolioDto>) => Promise<string>;

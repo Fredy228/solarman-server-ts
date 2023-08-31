@@ -1,0 +1,12 @@
+import Joi from "joi";
+import { IStoreComponents } from "../interfaces/IStore";
+export declare const contactsValidator: Joi.ObjectSchema<any>;
+export declare const userCreateSchema: Joi.ObjectSchema<any>;
+export declare const userUpdateSchema: Joi.ObjectSchema<any>;
+export declare const createPostSchema: Joi.ObjectSchema<any>;
+export declare const deletePostImgSchema: Joi.ObjectSchema<any>;
+export declare const updatePostSchema: Joi.ObjectSchema<any>;
+export declare const updateOrderSchema: Joi.ArraySchema<any[]>;
+export declare const CreateStoreSetsSchema: Joi.ObjectSchema<any>;
+export declare const CreateStoreComponentsSchema: Joi.ObjectSchema<any>;
+export declare const componentsAddValidate: (data: Pick<IStoreComponents, "descripMain" | "optionSort" | "descripCharacter">) => Joi.ValidationResult<any>;

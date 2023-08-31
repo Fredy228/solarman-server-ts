@@ -1,0 +1,11 @@
+import { Database } from "sqlite3";
+import { IUser } from "../../interfaces/IUser";
+import { CreateUserDto } from "./user.dto";
+export declare const toConnectDB: () => Database;
+export declare const createUser: (newUser: CreateUserDto) => Promise<Omit<IUser, "password">>;
+export declare const getUsers: () => Promise<IUser[]>;
+export declare const getUserById: (id: Pick<IUser, "id">) => Promise<IUser>;
+export declare const getUserByName: (name: string) => Promise<IUser>;
+export declare const deleteUser: (id: string) => Promise<string>;
+export declare const updateUser: ({ name, email, role, token, id, }: Partial<IUser>) => Promise<IUser>;
+export declare const updatePass: ({ password, id, }: Pick<IUser, "id" | "password">) => Promise<IUser>;
